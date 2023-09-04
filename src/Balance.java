@@ -10,7 +10,11 @@ public class Balance {
     }
 
     public void withdraw(double withdraw) {
-        this.balance -= withdraw;
+        if(withdraw > balance) {
+            System.out.println("You balance is " + balance + ", you don't have this amount to withraw.");
+        } else {
+            this.balance -= withdraw;
+        }
     }
 
     public double getBalance() {
